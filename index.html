@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech india Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FH Tech India Dashboard</h1>
+    </header>
+    <div class="container">
+        <div class="dashboard-grid">
+            <div id="engagement-analytics" class="card">
+                <h2>Stable Builds</h2>
+                <table>
+                    <tr>
+                        <th>Platform / Software</th>
+                        <th>Build</th>                        
+                        <th>Comments</th>
+                    </tr>
+                    <tr>
+                        <td>Fusion</td>
+                        <td>14.1.8</td>                        
+                        <td>For now its a stable build with caller id functionality</td>
+                    </tr>
+                    <tr>
+                        <td>Fusion - Multi Takeaway </td>
+                        <td>14.4.6</td>                        
+                        <td>For now its a stable build with caller id functionality</td>
+                    </tr>
+                    <tr>
+                        <td>MYT Lite</td>
+                        <td>21.9</td>                        
+                        <td>This is a stable build  for MYPOS, A920 & Other online ordering services</td>
+                    </tr>
+                    <tr>
+                        <td>FH Pay</td>
+                        <td>2.6</td>                        
+                        <td>Stable version for A920 & A920 pro </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div id="engagement-analytics" class="card">
+            <h2>Top Issues</h2>
+            <table>
+                <tr>
+                    <th>Issue</th>                    
+                    <th>Fix</th>
+                </tr>
+                <tr>
+                    <td>Fusion Loop</td>
+                    <td>Update version to 14.6.1 /12.8.3, Enable App sync on MS</td>                        
+                </tr>
+                
+                <tr>
+                    <td>Caller ID not Working</td>
+                    <td>Update version to 14.1.8 or 14.4.6</td>                        
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

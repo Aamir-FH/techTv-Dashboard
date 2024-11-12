@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -67,5 +67,53 @@
         </div>
     </div>
     
+</body>
+</html>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Resolution Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .resolution-display {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #4a90e2;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="resolution-display">
+    <h2>Your Screen Resolution:</h2>
+    <p id="resolution"></p>
+</div>
+
+<script>
+    function displayScreenResolution() {
+        const width = window.screen.width;
+        const height = window.screen.height;
+        const resolutionText = `${width} x ${height}`;
+        document.getElementById("resolution").textContent = resolutionText;
+    }
+
+    // Call the function on page load
+    window.onload = displayScreenResolution;
+</script>
+
 </body>
 </html>

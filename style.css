@@ -43,13 +43,16 @@ body {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    min-height: 100vh;
+    font-size: 1.2em; /* adjust base font size */
+    /* min-height: 100vh; */
 }
 
 .container {
-    /* max-width: 1200px; */
+    
     margin: 0 auto;
     padding: 20px;
+    max-width: 90vw; /* Extend to nearly full screen width */
+
 }
 
 header {
@@ -64,6 +67,7 @@ header {
 header h1 {
     position: relative;
     z-index: 1;
+    font-size: 3em; /* increase header size */
 }
 
 header::before {
@@ -117,7 +121,7 @@ nav ul li a:hover::after {
 
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1rem;
 }
 
@@ -141,6 +145,8 @@ nav ul li a:hover::after {
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
+    font-size: 2em;
+
 }
 
 .card h2::after {
@@ -193,7 +199,8 @@ tr:hover {
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2em;
+
 }
 
 .btn:hover {
@@ -324,5 +331,14 @@ input:focus, textarea:focus, select:focus {
 
     nav ul li {
         margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1600px) {
+    body {
+        font-size: 1.4em;
+    }
+    .card {
+        padding: 2rem;
     }
 }

@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #343434	;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +21,27 @@ body {
     max-width: 1600px;
 }
 
+@keyframes rainbowBorder {
+    0% {
+        border-color: #ff0000; /* Red */
+    }
+    20% {
+        border-color: #ff9a00; /* Orange */
+    }
+    40% {
+        border-color: #ffff00; /* Yellow */
+    }
+    60% {
+        border-color: #00ff00; /* Green */
+    }
+    80% {
+        border-color: #0000ff; /* Blue */
+    }
+    100% {
+        border-color: #ff00ff; /* Magenta */
+    }
+}
+
 .card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -30,7 +51,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border: 3px solid #4a90e2; /* Default color for fallback */
+    animation: rainbowBorder 5s linear infinite; /* Apply animation */
 }
+
 
 .card-grid {
     display: grid;
@@ -41,18 +65,36 @@ body {
 }
 
 .card-item {
-    background-color: #4a90e2;
+    background-color: #D82927;
     color: white;
     border-radius: 5px;
     padding: 20px;
     text-align: center;
     font-size: 1.2rem;
+    border: 2px solid #fff; /* White border for each card item */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border: 2px solid black; /* Black border for table headers and cells */
+    transition: background-color 0.3s ease;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Responsive styling for large screens */
 @media (min-width: 1600px) {
     .dashboard-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .card-item {
